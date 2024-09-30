@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import AppItem from './AppItem.vue';
+import AppItem from './AppItem.vue'
 
 export default {
-  name: 'ItemList',
+  name: 'Itemlist',
   components: {
     AppItem
   },
@@ -30,10 +30,12 @@ export default {
   },
   methods: {
     handleAddToCart(item) {
-      console.log('Item added to cart: Name: ${item.name}, Price: ${item.price}')
+      console.log(`Item added to cart: Name: ${item.name}, Price: ${item.price}`)
     }
   }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

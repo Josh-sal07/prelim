@@ -1,30 +1,26 @@
 <template>
   <div>
-    <h1>Total Price: ${{ totalPrice }}</h1>
+    <ItemList :items="Items" />
   </div>
 </template>
 
 <script>
+import ItemList from './components/ItemList.vue'
+
 export default {
+  name: 'App',
+  components: {
+    ItemList
+  },
   data() {
     return {
       items: [
-        { name: 'Laptop', price: 1000 },
-        { name: 'Phone', price: 500 },
-        { name: 'Tablet', price: 300 }
+        { id: 1, name: 'Item 1', price: 10, isVisible: true },
+        { id: 2, name: 'Item 2', price: 20, isVisible: false }
       ]
-    };
-  },
-  computed: {
-    totalPrice() {
-      return this.items.reduce((sum, item) => sum + item.price, 0);
     }
   }
-};
+}
 </script>
 
- items: [
-        { name: 'Iphone', price: 1000 },
-        { name: 'Samsung', price: 500 },
-        { name: 'Mega 1', price: 300 }
-      ]
+<style scoped></style>
